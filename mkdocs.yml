@@ -1,10 +1,13 @@
-site_name: Rivers and lakes # Название сайта
-site_description: Rivers and lakes of Russia # Описание сайта, добавляется в meta-теги
+site_name: Docs for techwriters # Название сайта
+site_description: Docs by parawriter # Описание сайта, добавляется в meta-теги
 theme: # Тема сайта, информация о ее параметрах
   name: material # Название темы
-  logo: images/logos.svg # Ссылка на логотип сайта
+  breadcrumbs:
+       show: true
+  custom_dir: custom_templates
+  logo: images/logo.svg # Ссылка на логотип сайта
   font:
-    text: Roboto # Шрифт текста
+    text: Arial # Шрифт текста
     code: Roboto Mono # Шрифт для текста кода
   features:
     #- navigation.sections
@@ -22,39 +25,44 @@ theme: # Тема сайта, информация о ее параметрах
     - content.code.copy # Кнопка копирования в блоке кода
 
   language: ru # Язык
-  palette: # Настройки светлой и тёмной тем
+  palette: # Настройки тем
+    - scheme: tech
+#      toggle:
+#        icon: material/weather-sunny # Иконка для активации светлой темы
+#        name: Выключить солнышко # Всплывающий текст-подсказка
     # Настройки светлой темы
-    - scheme: default 
-      toggle:
-        icon: material/weather-sunny # Иконка для активации светлой темы
-        name: Выключить солнышко # Всплывающий текст-подсказка
-      primary: blue # Основной цвет
-      accent: purple # Акцентный цвет
+#    - scheme: default 
+#      toggle:
+#        icon: material/weather-sunny # Иконка для активации светлой темы
+#        name: Выключить солнышко # Всплывающий текст-подсказка
+#      primary: custom # Основной цвет
+#      accent: blue # Акцентный цвет
     # Настройки тёмной темы
-    - scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: Позвать солнышко
-      primary: deep purple
-      accent: blue
+#    - scheme: slate
+#      toggle:
+#        icon: material/weather-night
+#        name: Позвать солнышко
+ #     primary: custom
+#      accent: blue
 
 nav: # Структура сайта
-    - Главная страница: index.md
-    - Озёра России: 
-      - lakes/index.md
-      - Онежское озеро: lakes/onega.md
-      - Ладожское озеро: lakes/ladoga.md
-      - Байкал: lakes/baikal.md
-    - Реки России:
-      - rivers/index.md
-      - Свирь: rivers/svir.md
-      - Нева: rivers/neva.md
-      - Ангара: rivers/angara.md
+    - Тех.дока: index.md
+    - Онбординг тех.писателя: 
+      - onboarding/index.md
+    - Docs-as-code:
+      - docs-as-code/index.md
+      - docs-as-code/1step.md
+    - Swagger: dist/index.html
 
 extra:
   social: # Ссылки на соц.сети
     - icon: fontawesome/brands/github-alt # Иконка гитхаба
       link: https://github.com/{your_account} # Ссылка на гитхаб
+  navbar:
+    - html: '<a href="https://example.com"><img src="images/banner.jpg" alt="Banner" style="width:50%;" /></a>'
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions: # Расширения markdown
   - admonition # Поддержка информационных панелей (сообщений типа «Внимание», «Совет», «Примечание», etc.)
@@ -74,3 +82,6 @@ markdown_extensions: # Расширения markdown
 
 copyright: |
   &copy; 2024 NOVILLERO
+
+
+
