@@ -187,10 +187,10 @@ components:
           description: Уникальный идентификатор пользователя
         username:
           type: string
-          description: Никнейм пользователя
+          description: Название учётной записи пользователя
         email:
           type: string
-          description: Емейл пользователя
+          description: Email пользователя
         firstName:
           type: string
           description: Имя пользователя
@@ -248,10 +248,10 @@ components:
       properties:
         username:
           type: string
-          description: Никнейм пользователя
+          description: Название учётной записи пользователя
         email:
           type: string
-          description: Емейл пользователя
+          description: Email пользователя
         firstName:
           type: string
           description: Имя пользователя
@@ -300,10 +300,10 @@ components:
       properties:
         username:
           type: string
-          description: Никнейм пользователя
+          description: Название учётной записи пользователя
         email:
           type: string
-          description: Емейл пользователя
+          description: Email пользователя
         firstName:
           type: string
           description: Имя пользователя
@@ -351,8 +351,10 @@ components:
         code:
           type: integer
           format: int32
+          description: "Код ошибки"
         message:
           type: string
+          description: "Сообщение об ошибке"
 
   responses:
     UserListSuccess:
@@ -389,46 +391,76 @@ components:
       description: Пользователь успешно удален
 
     UserNotFound:
-      description: ""
+      description: "Пользователь не найден"
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/error'
+          examples:
+            example:
+              value:
+                code: "404"
+                message: "Пользователь с таким id не найден"
 
     Unauthorized:
-      description: ""
+      description: "Доступ к ресурсу запрещён"
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/error'
+          examples:
+            example:
+              value:
+                code: "401"
+                message: "Доступ запрещён. Пройдите аутентификацию"
 
     Conflict:
-      description: ""
+      description: "Конфликт при создании записи"
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/error'
+          examples:
+            example:
+              value:
+                code: "409"
+                message: "Конфликт: пользователь с такими данными уже существует"
 
     MethodNotAllowed:
-      description: ""
+      description: "Метод запроса не поддерживается"
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/error'
+          examples:
+            example:
+              value:
+                code: "405"
+                message: "Метод запроса не поддерживается для этого ресурса"
 
     ServerError:
-      description: ""
+      description: "Внутренняя ошибка сервера"
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/error'
+          examples:
+            example:
+              value:
+                code: "500"
+                message: "Внутренняя ошибка сервера. Повторите запрос позже"
 
     UnprocessableEntity:
-      description: ""
+      description: "Некорректные данные"
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/error'
+          examples:
+            example:
+              value:
+                code: "422"
+                message: "Некорректные данные, проверьте вводимые параметры пользователя"
 
   securitySchemes:
     api_key:

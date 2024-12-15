@@ -51,7 +51,6 @@ nav: # Структура сайта
       - onboarding/index.md
     - Docs-as-code:
       - docs-as-code/index.md
-      - docs-as-code/1step.md
     - Swagger: dist/index.html
 
 extra:
