@@ -4,7 +4,7 @@ theme: # Тема сайта, информация о ее параметрах
   name: material # Название темы
   breadcrumbs:
        show: true
-  custom_dir: custom_templates
+  #custom_dir: custom_templates
   logo: images/logo.svg # Ссылка на логотип сайта
   font:
     text: Arial # Шрифт текста
