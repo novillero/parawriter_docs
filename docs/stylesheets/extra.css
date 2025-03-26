@@ -63,3 +63,8 @@ ul, ol {
 .md-nav__link:hover {
     color: #221c1a; 
 }
+  
+.md-status--in-progress::after {
+    mask-image: var(--md-status--in-progress);
+    -webkit-mask-image: var(--md-status--in-progress);
+  }

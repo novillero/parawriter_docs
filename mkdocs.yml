@@ -6,6 +6,7 @@ theme: # Тема сайта, информация о ее параметрах
        show: true
   custom_dir: custom_templates
   logo: images/logo.svg # Ссылка на логотип сайта
+  favicon: images/favicon.png
   font:
     text: Arial # Шрифт текста
     code: Roboto Mono # Шрифт для текста кода
@@ -45,13 +46,30 @@ theme: # Тема сайта, информация о ее параметрах
  #     primary: custom
 #      accent: blue
 
+plugins:
+  - search
+  - blog
+  - encryptcontent:
+      title_prefix: '[LOCK]'
+      summary: 'Страница содержит конфиденциальную информацию'
+      placeholder: 'Пароль'
+      decryption_failure_message: 'Неверный пароль. Попробуйте ещё раз'
+      encryption_info_message: "Введите пароль для получения доступа:"
+      password_button: True
+      password_button_text: 'Войти'
+
+
 nav: # Структура сайта
     - Тех.дока: index.md
+    - Портфолио:
+      - portfolio/index.md
+      - Стайлгайд: portfolio/styleguide.md
+      - Пошаговая инструкция: portfolio/step-by-step.md
+      - Спецификация Open API: dist/index.html
     - Онбординг тех.писателя: 
       - onboarding/index.md
     - Docs-as-code:
       - docs-as-code/index.md
-    - Swagger: dist/index.html
 
 extra:
   social: # Ссылки на соц.сети
@@ -59,6 +77,10 @@ extra:
       link: https://github.com/{your_account} # Ссылка на гитхаб
   navbar:
     - html: '<a href="https://example.com"><img src="images/banner.jpg" alt="Banner" style="width:50%;" /></a>'
+
+extra_javascript:
+  - js/jquery-3.5.1.min.js
+  - js/image-zoom.js
 
 extra_css:
   - stylesheets/extra.css
