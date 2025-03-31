@@ -9,6 +9,8 @@ function handleImageZoom() {
     $('img:not([alt="logo"],.no-zoom)').off('click').css({cursor: 'zoom-in'}).on('click', function () {
         var img = $(this);
         var scale = 1; // Начальный масштаб
+        var isDragging = false; // Флаг для отслеживания перетаскивания
+        var startX, startY, initialX, initialY; // Переменные для координат
 
         // Создаем увеличенное изображение
         var bigImg = $('<img />').css({
@@ -58,6 +60,36 @@ function handleImageZoom() {
             $(this).css('transform', 'translate(-50%, -50%) scale(' + scale + ')');
         });
 
+        // Обработка перетаскивания изображения
+        bigImg.on('mousedown', function(event) {
+            isDragging = true;
+            startX = event.clientX;
+            startY = event.clientY;
+            initialX = parseFloat($(this).css('left')) || 0;
+            initialY = parseFloat($(this).css('top')) || 0;
+            event.preventDefault(); // Предотвращаем выделение текста
+        });
+
+        $(document).on('mousemove', function(event) {
+            if (isDragging) {
+                var dx = event.clientX - startX;
+                var dy = event.clientY - startY;
+                bigImg.css({
+                    left: initialX + dx + 'px',
+                    top: initialY + dy + 'px'
+                });
+            }
+        }).on('mouseup', function() {
+            isDragging = false; // Убираем флаг перетаскивания
+        });
+
+        // Обработчик для закрытия изображения при клике на затемненный фон
+        over.on('click', function() {
+            $(this).fadeOut(300, function() {
+                $(this).remove();
+            });
+        });
+
         // Закрытие увеличенного изображения по клавише Esc
         $(document).on('keydown', function(event) {
             if (event.key === "Escape") {
@@ -65,6 +97,11 @@ function handleImageZoom() {
                     $(this).remove();
                 });
             }
+        });
+
+        // Предотвращаем закрытие изображения при клике на него
+        bigImg.on('click', function(event) {
+            event.stopPropagation(); // Останавливаем всплытие события
         });
     });
 }
