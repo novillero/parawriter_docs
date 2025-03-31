@@ -79,7 +79,7 @@ extra:
     - html: '<a href="https://example.com"><img src="images/banner.jpg" alt="Banner" style="width:50%;" /></a>'
 
 extra_javascript:
-  - js/jquery-3.5.1.min.js
+  - js/jquery-3.7.1.min.js
   - js/image-zoom.js
 
 extra_css:
