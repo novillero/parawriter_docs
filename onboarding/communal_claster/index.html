@@ -1,0 +1,1156 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Docs by parawriter">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Troubleshooting - Docs for techwriters</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Arial";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../css/viewer.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="tech" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Docs for techwriters" class="md-header__button md-logo" aria-label="Docs for techwriters" data-md-component="logo">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs for techwriters
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="tech" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Docs for techwriters" class="md-nav__button md-logo" aria-label="Docs for techwriters" data-md-component="logo">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    Docs for techwriters
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Тех.дока
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../portfolio/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Портфолио
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Портфолио
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio/styleguide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Стайлгайд
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio/step-by-step/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Пошаговая инструкция
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Спецификация Open API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Онбординг тех.писателя
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Онбординг тех.писателя
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../docs-as-code/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Docs-as-code
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--in-progress"></span>
+  
+
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Docs-as-code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ошибки UPGRADE FAILED
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ошибки UPGRADE FAILED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timed-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      timed out waiting for the condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-processing-rollout-phase-stage-error-tracking-resources-deploy-track-failed-context-deadline-exceeded" class="md-nav__link">
+    <span class="md-ellipsis">
+      error processing rollout phase stage: error tracking resources: deploy/ track failed: context deadline exceeded
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#another-operation-installupgraderollback-is-in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      another operation (install/upgrade/rollback) is in progress
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#has-no-deployed-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      has no deployed releases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-validating-claims" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error validating claims
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error validating claims">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claim-ref_protected-does-not-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      claim "ref_protected" does not match
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claim-project_path-does-not-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      claim "project_path" does not match
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#will-exceed-the-configured-upper-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      will exceed the configured upper limit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exceeded-quota" class="md-nav__link">
+    <span class="md-ellipsis">
+      exceeded quota
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harbor-authentication-credentials-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Harbor authentication credentials not found!!!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nswerf-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      ns/werf-synchronization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-tokens-from-the-tokenrequest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use tokens from the TokenRequest API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undefined-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Undefined error
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-413" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP 413 Request Entity Too Large
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-431" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP 431 Request Header Fields Too Large
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Проблема со скачиванием зависимостей
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="troubleshooting">Troubleshooting</h1>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Статья является копией из документации <a href="https://docs-devops.wb.ru/cicd/howto/troubleshooting.html">docs-devops.wb.ru</a>, будет адаптирована под наши условия.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Внимание</p>
+<p>Перед дебагом обновите до последней версии пайплайн и чарт для деплоя в файле <code>.gitlab-ci.yml</code>. После этого попробуйте снова задеплоить проект. Последние версии:</p>
+<ul>
+<li><a href="https://gitlab.wildberries.ru/devops/ci/templates/-/releases">Пайплайн</a> </li>
+<li>Чарты: <a href="https://gitlab.wildberries.ru/devops/helm/charts/common-deploy/-/releases">common-deploy</a> | <a href="https://gitlab.wildberries.ru/devops/helm/charts/common-job/-/releases">common-job</a> | <a href="https://gitlab.wildberries.ru/devops/helm/charts/common-cronjob/-/releases">common-cronjob</a> | <a href="https://gitlab.wildberries.ru/devops/helm/charts/common-statefulset/-/releases">common-statefulset</a></li>
+</ul>
+<details class="quote">
+<summary>🔎 Как обновить версию пайплайна и чарта</summary>
+<p><img alt="" src="../../images/ci-cd/up_version_ci_chart.png" /></p>
+</details>
+</div>
+<p>Для быстрого перехода к ошибке выберите её в содержании страницы справа.</p>
+<p>Сообщение об ошибке не всегда есть в конце логов джобы в GitLab. Ищите <code>error</code> или <code>err</code> поиском по странице в браузере.</p>
+<p>Для решения проблем установите <a href="https://kubernetes.io/docs/tasks/tools/#kubectl">kubectl</a> и <a href="https://helm.sh/ru/docs/intro/install/">helm</a>.</p>
+<h2 id="upgrade-failed">Ошибки UPGRADE FAILED</h2>
+<h3 id="timed-out">timed out waiting for the condition</h3>
+<p><code>Error: UPGRADE FAILED: timed out waiting for the condition</code></p>
+<details class="success">
+<summary>Решение</summary>
+<p>Суть проблемы: сервис был задеплоен, но не поднялся успешно. Джоба деплоя отслеживает статус подов новой ревизии — если не все поды новой ревизии перешли в состояние <code>ready</code>, джоба завершается с ошибкой <code>FATA[*] timed out waiting for the condition</code>.</p>
+<p>В примерах описаны шаги для <code>kubectl</code>. Эти же шаги актуальны для k9s и Lens. </p>
+<p>Для всех причин возникновения проблемы должна быть одна и та же ситуация с деплойментом — какие-то поды не находятся в состоянии <code>ready</code>. Проверьте командой:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>deployment<span class="w"> </span>&lt;release_name&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w">                            </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>NAME<span class="w">             </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&lt;release_name&gt;<span class="w">   </span><span class="m">0</span>/1<span class="w">     </span><span class="m">1</span><span class="w">            </span><span class="m">0</span><span class="w">           </span>3h27m
+</code></pre></div>
+<p>Ниже список возможных причин, из-за которых возникла проблема, команды для проверки и примеры вывода. Разверните <strong>каждую причину</strong> и выполните шаги по инструкции, чтобы найти конкретную причину, из-за которой возникла проблема. Если вы выполняете шаги и не видите результата, который описан, переходите к следующей причине.</p>
+<p>Для дебага <a href="https://mikefarah.gitbook.io/yq">установите утилиту</a> <code>yq</code>.</p>
+<details class="quote">
+<summary>Основной, сайдкар или init контейнер пода завершаются с ошибкой</summary>
+<ol>
+<li>
+<p>Получите список подов и найдите под в состоянии <code>CrashLoopBackOff</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--selector<span class="w"> </span>app.kubernetes.io/name<span class="o">=</span>&lt;release_name&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>NAME<span class="w">                              </span>READY<span class="w">   </span>STATUS<span class="w">             </span>RESTARTS<span class="w">   </span>AGE
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&lt;release_name&gt;-64bdc54d94-74hg7<span class="w">   </span><span class="m">0</span>/1<span class="w">     </span>CrashLoopBackOff<span class="w">   </span><span class="m">46</span><span class="w">         </span>3h30m
+</code></pre></div>
+</li>
+<li>
+<p>Проверьте события пода — вы увидите, что под перезапускается из-за ошибки <code>BackOff</code> в контейнере.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>events<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--field-selector<span class="w"> </span><span class="nv">type</span><span class="o">=</span>Warning,involvedObject.name<span class="o">=</span>&lt;release_name&gt;-64bdc54d94-74hg7
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>LAST<span class="w"> </span>SEEN<span class="w">   </span>TYPE<span class="w">      </span>REASON<span class="w">    </span>OBJECT<span class="w">                                </span>MESSAGE
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>3m15s<span class="w">       </span>Warning<span class="w">   </span>BackOff<span class="w">   </span>pod/&lt;release_name&gt;-64bdc54d94-74hg7<span class="w">   </span>Back-off<span class="w"> </span>restarting<span class="w"> </span>failed<span class="w"> </span>container
+</code></pre></div>
+</li>
+<li>
+<p>Проверьте <code>exit code</code> контейнеров в поде. Если контейнер завершается с кодом ошибки <code>137</code> (OOMKilled), <strong>контейнеру не хватает памяти</strong> — проверьте использование памяти приложением. Если необходимо, увеличьте лимит по памяти — подробнее в статье <a href="res-management">Управление ресурсами</a>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span>oom-&lt;release_name&gt;-64bdc54d94-74hg7<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>yq<span class="w"> </span><span class="s1">&#39;.status.containerStatuses&#39;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>-<span class="w"> </span>containerID:<span class="w"> </span>containerd://60cc733478b9554d6334b8058ee5d5c04f9162893814fc372fa1b8442c9030ae
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>image:<span class="w"> </span>docker.io/library/debian:latest
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>imageID:<span class="w"> </span>docker.io/library/debian@sha256:43ef0c6c3585d5b406caa7a0f232ff5a19c1402aeb415f68bcd1cf9d10180af8
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span>lastState:
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span>terminated:
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span>containerID:<span class="w"> </span>containerd://60cc733478b9554d6334b8058ee5d5c04f9162893814fc372fa1b8442c9030ae
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span>exitCode:<span class="w"> </span><span class="m">137</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span>finishedAt:<span class="w"> </span><span class="s2">&quot;2023-02-22T07:12:52Z&quot;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span>reason:<span class="w"> </span>OOMKilled
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span>startedAt:<span class="w"> </span><span class="s2">&quot;2023-02-22T07:12:13Z&quot;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span>name:<span class="w"> </span>oom-test
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span>ready:<span class="w"> </span><span class="nb">false</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">  </span>restartCount:<span class="w"> </span><span class="m">3</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">  </span>started:<span class="w"> </span><span class="nb">false</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span>state:
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span>waiting:
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">      </span>message:<span class="w"> </span>back-off<span class="w"> </span>2m40s<span class="w"> </span>restarting<span class="w"> </span>failed<span class="w"> </span><span class="nv">container</span><span class="o">=</span>test-oom<span class="w"> </span><span class="nv">pod</span><span class="o">=</span>oom-test-7f4cc6d49-kr2c5_&lt;namespace&gt;<span class="o">(</span>21703aea-5340-4a35-bb99-ce32030412d3<span class="o">)</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">      </span>reason:<span class="w"> </span>CrashLoopBackOff
+</code></pre></div>
+</li>
+<li>
+<p>Если код ошибки не <code>137</code>, проверьте логи проблемного пода. Опция <code>-c</code> указывает, для какого контейнера в поде посмотреть логи (в примере основной контейнер, но это может быть сайдкар или init контейнер). На основе логов устраните причины, из-за которых контейнер завершается с ошибкой.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span>%<span class="w"> </span>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;release_name&gt;-64bdc54d94-74hg7<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-c<span class="w"> </span>&lt;release_name&gt;<span class="w"> </span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>some<span class="w"> </span>error<span class="w"> </span>logs
+</code></pre></div>
+</li>
+</ol>
+</details>
+<details class="quote">
+<summary>Бесконечно выполняется и не завершается vault init контейнер</summary>
+<p>Агент Vault в бесконечном цикле пытается получить секреты, но у него это не получается. При просмотре состояния подов можно увидеть, что есть незавершённый init контейнер, при этом счётчик рестартов не увеличивается и нет состояния <code>CrashLoopBackOff</code>.</p>
+<ol>
+<li>
+<p>Получите список подов.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--selector<span class="w"> </span>app.kubernetes.io/name<span class="o">=</span>&lt;release_name&gt;<span class="w">           </span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>NAME<span class="w">                              </span>READY<span class="w">   </span>STATUS<span class="w">     </span>RESTARTS<span class="w">   </span>AGE
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&lt;release_name&gt;-56975c5fd6-9txtp<span class="w">   </span><span class="m">0</span>/1<span class="w">     </span>Init:0/1<span class="w">   </span><span class="m">0</span><span class="w">          </span>3m1s
+</code></pre></div>
+</li>
+<li>
+<p>Проверьте логи init контейнера и определите, из-за чего возникла проблема.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;release_name&gt;-56975c5fd6-9txtp<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-c<span class="w"> </span>vault-agent
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="m">2022</span>-12-15T07:53:00.953Z<span class="w"> </span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span>auth.handler:<span class="w"> </span>error<span class="w"> </span>authenticating:
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nv">error</span><span class="o">=</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>Error<span class="w"> </span>making<span class="w"> </span>API<span class="w"> </span>request.
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>URL:<span class="w"> </span>PUT<span class="w"> </span>https://vault.wildberries.ru:8200/v1/auth/k8s.dldevel.vault-auth-&lt;namespace&gt;/login
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>Code:<span class="w"> </span><span class="m">400</span>.<span class="w"> </span>Errors:
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>*<span class="w"> </span>invalid<span class="w"> </span>role<span class="w"> </span>name<span class="w"> </span><span class="s2">&quot;vault-agent-injector-error-dev&quot;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w"> </span><span class="nv">backoff</span><span class="o">=</span>1s
+</code></pre></div>
+</li>
+<li>
+<p>В примере дан один из возможных вариантов — неправильная роль <code>vault-agent-injector-error-dev</code>. Для решения проблемы исправьте значения путей/имён секретов и значения в values-файлах — <a href="vault-integration">CD: Настройка деплоя</a>.</p>
+</li>
+</ol>
+</details>
+<details class="quote">
+<summary>Релиз прокатился, но K8s не нашёл живые liveness/readiness пробы и рестартит поды</summary>
+<ol>
+<li>
+<p>Получите список подов и найдите под в состоянии <code>CrashLoopBackOff</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--selector<span class="w"> </span>app.kubernetes.io/name<span class="o">=</span>&lt;release_name&gt;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>NAME<span class="w">                              </span>READY<span class="w">   </span>STATUS<span class="w">             </span>RESTARTS<span class="w">   </span>AGE
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>&lt;release_name&gt;-7dbcb5cc8f-dx2qf<span class="w">   </span><span class="m">0</span>/1<span class="w">     </span>CrashLoopBackOff<span class="w">   </span><span class="m">46</span><span class="w">         </span>3h30m
+</code></pre></div>
+</li>
+<li>
+<p>Проверьте события пода.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>events<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--field-selector<span class="w"> </span><span class="nv">type</span><span class="o">=</span>Warning,involvedObject.name<span class="o">=</span>&lt;release_name&gt;-7dbcb5cc8f-dx2qf
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>LAST<span class="w"> </span>SEEN<span class="w">   </span>TYPE<span class="w">      </span>REASON<span class="w">      </span>OBJECT<span class="w">                                </span>MESSAGE
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2m21s<span class="w">       </span>Warning<span class="w">   </span>Unhealthy<span class="w">   </span>pod/&lt;release_name&gt;-7dbcb5cc8f-dx2qf<span class="w">   </span>Liveness<span class="w"> </span>probe<span class="w"> </span>failed:<span class="w"> </span>Get<span class="w"> </span><span class="s2">&quot;http://10.32.29.189:8001/liveness&quot;</span>:<span class="w"> </span>dial<span class="w"> </span>tcp<span class="w"> </span><span class="m">10</span>.32.29.189:8001:<span class="w"> </span>connect:<span class="w"> </span>connection<span class="w"> </span>refused
+</code></pre></div>
+</li>
+<li>
+<p>Проверьте настройки liveness/readiness проб в values-файлах и что они работают правильно в контейнере.</p>
+</li>
+</ol>
+</details>
+<details class="quote">
+<summary>Закончилась квота в namespace, K8s ждёт высвобождения ресурсов</summary>
+<ol>
+<li>
+<p>Получите список ReplicaSet деплоя и найдите ReplicaSet, в котором значение <code>desired</code> не равно значению <code>current</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>replicaset<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--selector<span class="w"> </span>app.kubernetes.io/name<span class="o">=</span>&lt;release_name&gt;
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>NAME<span class="w">                        </span>DESIRED<span class="w">   </span>CURRENT<span class="w">   </span>READY<span class="w">   </span>AGE
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>&lt;release_name&gt;-7678d9678d<span class="w">   </span><span class="m">1</span><span class="w">         </span><span class="m">0</span><span class="w">         </span><span class="m">0</span><span class="w">       </span>4m29s
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>&lt;release_name&gt;-7994d84f9c<span class="w">   </span><span class="m">1</span><span class="w">         </span><span class="m">1</span><span class="w">         </span><span class="m">1</span><span class="w">       </span>31h
+</code></pre></div>
+</li>
+<li>
+<p>Проверьте, из-за какого ограничения не могут быть созданы поды.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>events<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--field-selector<span class="w"> </span><span class="nv">type</span><span class="o">=</span>Warning,involvedObject.name<span class="o">=</span>&lt;release_name&gt;-7678d9678d
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>LAST<span class="w"> </span>SEEN<span class="w">   </span>TYPE<span class="w">      </span>REASON<span class="w">         </span>OBJECT<span class="w">                                 </span>MESSAGE
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>11m<span class="w">         </span>Warning<span class="w">   </span>FailedCreate<span class="w">   </span>replicaset/&lt;release_name&gt;-7678d9678d<span class="w">   </span>Error<span class="w"> </span>creating:<span class="w"> </span>pods<span class="w"> </span><span class="s2">&quot;&lt;release_name&gt;-7678d9678d-jxxhd&quot;</span><span class="w"> </span>is<span class="w"> </span>forbidden:<span class="w"> </span>exceeded<span class="w"> </span>quota:<span class="w"> </span>compute-resources,<span class="w"> </span>requested:<span class="w"> </span>count/pods<span class="o">=</span><span class="m">1</span>,<span class="w"> </span>used:<span class="w"> </span>count/pods<span class="o">=</span><span class="m">10</span>,<span class="w"> </span>limited:<span class="w"> </span>count/pods<span class="o">=</span><span class="m">10</span>
+</code></pre></div>
+</li>
+<li>
+<p>Настройте использование текущей квоты сервисами или запросите увеличение квоты. Подробнее в статье <a href="res-management">Управление ресурсами</a>.</p>
+</li>
+</ol>
+</details>
+<details class="quote">
+<summary>Неверно указан entrypoint в values Vault</summary>
+<p>Суть проблемы: в чарте <code>common-deploy</code> используется <code>vault.env</code>, приложение не может быть запущено командой <code>/bin/sh -c ./app</code>. Примеры логов ниже.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;release_name&gt;-56975c5fd6-9txtp<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-c<span class="w"> </span>&lt;release_name&gt;
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>/bin/sh:<span class="w"> </span>./app:<span class="w"> </span>Permission<span class="w"> </span>denied
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;release_name&gt;-56975c5fd6-9txtp<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-c<span class="w"> </span>&lt;release_name&gt;
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>/bin/sh:<span class="w"> </span>./app:<span class="w"> </span>not<span class="w"> </span>found
+</code></pre></div>
+<p>Дополнительно можно убедиться, если проверить команду запуска пода в деплойменте. Выглядит так:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>deploy<span class="w"> </span>&lt;release_name&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>yq<span class="w"> </span><span class="s1">&#39;.spec.template.spec.containers[0].args&#39;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>-<span class="w"> </span>-c
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>-<span class="w"> </span>.<span class="w"> </span>/vault/secrets/env<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./app
+</code></pre></div>
+<p>Ключевая проблема — в контейнере нет файла <code>./app</code>, так как приложение запускается другой командой. </p>
+<p>Для решения проблемы назовите исполняемый файл <code>app</code> и положите его в рабочую директорию. </p>
+<p>Алтьтернативный вариант: в values-файлах проекта задайте <code>entrypoint</code> и укажите команду запуска приложения. Подробнее в <a href="vault-read-secrets">настройках деплоя</a>.</p>
+</details>
+</details>
+<hr />
+<h3 id="error-processing-rollout-phase-stage-error-tracking-resources-deploy-track-failed-context-deadline-exceeded">error processing rollout phase stage: error tracking resources: deploy/<service_name> track failed: context deadline exceeded</h3>
+<p><code>Error: UPGRADE FAILED: error processing rollout phase stage: error tracking resources: deploy/&lt;service_name&gt; track failed: context deadline exceeded</code></p>
+<div class="admonition success">
+<p><strong>Решение</strong>: смотри решение проблемы <a href="#timed-out">timed out waiting for the condition</a></p>
+</div>
+<hr />
+<h3 id="another-operation-installupgraderollback-is-in-progress">another operation (install/upgrade/rollback) is in progress</h3>
+<p><code>Error: UPGRADE FAILED: another operation (install/upgrade/rollback) is in progress</code></p>
+<details class="success">
+<summary>Решение</summary>
+<p>Суть проблемы: предыдущий деплой по какой-то причине не был закончен, релиз находится в статусе <code>pending-upgrade</code>. </p>
+<p>Есть 2 варианта решения: откат релиза или удаление.</p>
+<p><strong>Откат релиза</strong></p>
+<ol>
+<li>
+<p>Проверьте текущее состояние релизов в K8s namespace.</p>
+<p><code>helm list --all -n &lt;namespace&gt;</code></p>
+</li>
+<li>
+<p>Откатитесь на предыдущий успешный релиз, укажите <code>0</code> как номер релиза.</p>
+<p><code>helm rollback &lt;release_name&gt; 0 -n &lt;namespace&gt;</code></p>
+<div class="highlight"><pre><span></span><code>* Также можно посмотреть историю релизов и откатиться на конкретную версию.
+
+    `helm history &lt;release_name&gt; -n &lt;namespace&gt;`
+    `helm rollback &lt;release_name&gt; &lt;release_number&gt; -n &lt;namespace&gt;`
+</code></pre></div>
+</li>
+</ol>
+<p><strong>Удаление релиза</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Прочтите перед удалением релиза!</p>
+<p>Если выполняются все 3 условия:</p>
+<div class="highlight"><pre><span></span><code>* Релиз в **STAGE/PROD**.
+* Вы не знаете, используется ли доменное имя приложения в апстримах nginx.
+* Вы не используете K8s Ingress.
+</code></pre></div>
+<p>Обязательно обратитесь к руководителю за помощью и/или напишите <a href="https://wbsm.wb.ru/support/infrastruktura/nginx/dat-informatsiyu-po-upstream">заявку в WBSM</a> на проверку апстримов.</p>
+<p>Зачем это нужно: чтобы не сломать доступ к приложению через прокси.</p>
+</div>
+<ol>
+<li>Убедитесь, что полная переустановка сервиса не приведёт к проблемам с прокси, или обратитесь к DevOps.</li>
+<li>
+<p>Удалите релиз:</p>
+<p><code>helm uninstall &lt;release_name&gt; -n &lt;namespace&gt;</code></p>
+</li>
+</ol>
+</details>
+<hr />
+<h3 id="has-no-deployed-releases"><service_name> has no deployed releases</h3>
+<p><code>Error: UPGRADE FAILED: &lt;service_name&gt; has no deployed releases</code></p>
+<details class="success">
+<summary>Решение</summary>
+<p>Появляется при первом деплое через Helm поверх старых деплоев.</p>
+<p>Суть проблемы: Helm находит в K8s namespace один из ресурсов, который совпадает с его релизом, делает <code>helm upgrade</code>, не находит установленные с помощью Helm релизы и падает. Для исправления нужно удалить хвосты предыдущих деплоев с помощью bash-скрипта. Первым аргументом передаётся имя релиза, а вторым — имя K8s namespace.</p>
+<div class="admonition warning">
+<p class="admonition-title">Прочтите перед удалением релиза!</p>
+<p>Если выполняются все 3 условия:</p>
+<div class="highlight"><pre><span></span><code>* Релиз в **STAGE/PROD**.
+* Вы не знаете, используется ли доменное имя приложения в апстримах nginx.
+* Вы не используете K8s Ingress.
+</code></pre></div>
+<p>Обязательно обратитесь к руководителю за помощью и/или напишите <a href="https://wbsm.wb.ru/support/infrastruktura/nginx/dat-informatsiyu-po-upstream">заявку в WBSM</a> на проверку апстримов.</p>
+<p>Зачем это нужно: чтобы не сломать доступ к приложению через прокси.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>helm<span class="w"> </span>uninstall<span class="w"> </span><span class="nv">$1</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$2</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nv">apiresources</span><span class="o">=(</span><span class="s2">&quot;daemonsets&quot;</span><span class="w"> </span><span class="s2">&quot;replicasets&quot;</span><span class="w"> </span><span class="s2">&quot;services&quot;</span><span class="w"> </span><span class="s2">&quot;deployments&quot;</span><span class="w"> </span><span class="s2">&quot;pods&quot;</span><span class="w"> </span><span class="s2">&quot;rc&quot;</span><span class="o">)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">for</span><span class="w"> </span>apiresource<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">apiresources</span><span class="p">[@]</span><span class="si">}</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">do</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;+++ Apiresource is&#39;</span><span class="w"> </span><span class="nv">$apiresource</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="k">for</span><span class="w"> </span>resource<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span><span class="nv">$apiresource</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$2</span><span class="w"> </span>-o<span class="w"> </span>name<span class="w"> </span>--no-headers<span class="k">)</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="k">do</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;+++ Resource is&#39;</span><span class="w"> </span><span class="nv">$resource</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="k">if</span><span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span><span class="nv">$resource</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$2</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>kubectl<span class="w"> </span>delete<span class="w"> </span><span class="nv">$resource</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$2</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;--- Resource </span><span class="nv">$resource</span><span class="s2"> was deleted&quot;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="k">fi</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="k">done</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="k">done</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;+++ Apiresource is sercets&#39;</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="k">for</span><span class="w"> </span>resource<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>secrets<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;name in (helm, </span><span class="nv">$1</span><span class="s2">)&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$2</span><span class="w"> </span>-o<span class="w"> </span>name<span class="w"> </span>--no-headers<span class="k">)</span><span class="w">   </span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="k">do</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;+++ Resource is&#39;</span><span class="w"> </span><span class="nv">$resource</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="k">if</span><span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span><span class="nv">$resource</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$2</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>kubectl<span class="w"> </span>delete<span class="w"> </span><span class="nv">$resource</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$2</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;--- Resource </span><span class="nv">$resource</span><span class="s2"> was deleted&quot;</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="k">fi</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="k">done</span>
+</code></pre></div>
+</details>
+<hr />
+<h2 id="error-validating-claims">Error validating claims</h2>
+<h3 id="claim-ref_protected-does-not-match">claim "ref_protected" does not match</h3>
+<p><code>Error validating claims: claim "ref_protected" does not match any associated bound claim values</code></p>
+<p>Суть проблемы: не настроен <strong>Protected Tag</strong>. </p>
+<div class="admonition success">
+<p><strong>Решение:</strong> настройте <strong>Protected tag</strong> по <a href="protected-tag">инструкции</a>.</p>
+</div>
+<hr />
+<h3 id="claim-project_path-does-not-match">claim "project_path" does not match</h3>
+<p><code>Error validating claims: claim "project_path" does not match any associated bound claim values</code></p>
+<p>Суть проблемы: фактическое расположение проекта в GitLab не соответствует настройкам в <code>.gitlab-ci.yml</code>.</p>
+<div class="admonition success">
+<p><strong>Решение:</strong> проверьте, что проект расположен правильно. Подробнее в <a href="getting-started">инфраструктуре CI/CD</a> и на скриншоте под спойлером ниже.</p>
+</div>
+<details class="quote">
+<summary>Как проверить путь до проекта</summary>
+<p><img alt="" src="../../images/ci-cd/bound_claims_project_path.png" /></p>
+<p>Дефолтные настройки. Если при таких настройках проблема сохраняется, скорее всего ваш проект использует кастомную схему — для решения обратитесь к руководителю или в чат коммьюнити <a href="https://band.wb.ru/wb/channels/cicd_k8s_community">CI/CD K8S community в WB Band</a>.</p>
+</details>
+<hr />
+<h2 id="will-exceed-the-configured-upper-limit">will exceed the configured upper limit</h2>
+<p><code>DENIED: adding X MiB of storage resource, which when updated to current usage of Y GiB will exceed the configured upper limit of Z GiB.</code></p>
+<p>Суть проблемы: закончилась квота в проекте Harbor, невозможно запушить собранный образ.</p>
+<div class="admonition success">
+<p><strong>Решение:</strong> удалите ненужные образы из проекта Harbor. Это может сделать пользователь Harbor с ролью Maintainer или Project Admin в проекте. Если у вас нет такой роли, попросите коллег из вашей команды помочь — инструкция по <a href="tools-harbor">получению доступа к проекту Harbor</a>.</p>
+<p>Также вы можете создать заявку Core-команде на увеличение квоты или создание политики очистки проекта Harbor — подробнее на <a href="support-harbor">странице поддержки</a>.</p>
+</div>
+<hr />
+<h2 id="exceeded-quota">exceeded quota</h2>
+<p><code>Error creating: pods "{pod_name}" is forbidden: exceeded quota:</code></p>
+<p>Суть проблемы: сервису не хватает квоты ресурсов или потребление настроено неправильно.</p>
+<div class="admonition success">
+<p><strong>Решение:</strong> запросите увеличение квоты или настройте потребление ресурсов в values-файлах сервисов, которые деплоятся в общий K8s namespace. Подробнее в статье <a href="res-management">Управление ресурсами</a>.</p>
+</div>
+<hr />
+<h2 id="harbor-authentication-credentials-not-found">Harbor authentication credentials not found!!!</h2>
+<p>Суть проблемы: задано неправильное значение переменной <code>REGISTRY_PROJECT</code> в файле <code>.gitlab-ci.yml</code>. </p>
+<div class="admonition success">
+<p><strong>Решение:</strong> укажите имя проекта в Harbor, которое совпадает с именем корневой группы GitLab. Подробнее в <a href="getting-started">инфраструктуре CI/CD</a>.</p>
+</div>
+<hr />
+<h2 id="nswerf-synchronization">ns/werf-synchronization</h2>
+<p><code>Error: unable to prepare kubernetes cm/{namespace} in ns/werf-synchronization: get Namespace {namespace} error: namespaces "{namespace}" is forbidden: User "system:serviceaccount:{namespace}:developer" cannot get resource "namespaces" in API group "" in the namespace "{namespace}"</code></p>
+<p>Суть проблемы: функция вывода подробного лога деплоя на основе werf сработала неправильно.</p>
+<div class="admonition success">
+<p><strong>Решение:</strong> перепрокатка неймспейса со стороны команды DevOps. Создайте тикет на дебаг CI/CD — <a href="https://wbsm.wb.ru/support/devops/ci-cd/ci-cd-debug">заявка в WBSM</a>. В описании укажите имя неймспейса и обязательно напишите, что неймспейс нужно перепрокатить из-за ошибки werf.</p>
+<p>💡 Если после перепрокатки неймспейса ошибка не исчезла, отключите подробный лог деплоя в файле <code>.gitlab-ci.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">variables</span><span class="p">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nt">CI_HELM_DEPLOY_USE_WERF</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;false&quot;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="use-tokens-from-the-tokenrequest-api">Use tokens from the TokenRequest API</h2>
+<p><code>Use tokens from the TokenRequest API or manually created secret-based tokens instead of auto-generated secret-based tokens.</code>  </p>
+<p>Суть проблемы: в новых кластерах (например, <strong>k8s.stage-xc</strong> или <strong>k8s.prod-xc</strong>) появляется сообщение при деплое.</p>
+<p>Это не ошибка, а предупреждение от K8s. На процесс деплоя это сообщение не влияет.</p>
+<div class="admonition success">
+<p><strong>Решение:</strong> проигнорируйте сообщение.</p>
+</div>
+<hr />
+<h2 id="undefined-error">Undefined error</h2>
+<p>Суть проблемы: при правильном описании <code>.gitlab-ci.yml</code> этап пайплайна не может запуститься, выводится сообщение.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Found errors in your .gitlab-ci.yml:
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    Undefined error (01FW4KHAPYQ9SZEFWT9Y4BAZNM)
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>You can also test your .gitlab-ci.yml in CI Lint 
+</code></pre></div>
+<p>Такие ошибки обычно вызваны внутренними сбоями GitLab или его бэкенда. </p>
+<div class="admonition success">
+<p><strong>Решение:</strong> запустите новый пайплайн из бокового меню GitLab: <strong>Build → Pipelines → Run pipeline</strong>.</p>
+</div>
+<hr />
+<h2 id="http-413">HTTP 413 Request Entity Too Large</h2>
+<p>Суть проблемы: слишком большое тело запроса.</p>
+<div class="admonition success">
+<p><strong>Решение:</strong> увеличьте максимальный размер запроса. Отредактируйте правила Ingress в values-файлах проекта — добавьте аннотацию nginx <code>proxy-body-size</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nt">ingress</span><span class="p">:</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="nt">objects</span><span class="p">:</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">servicePort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">      </span><span class="nt">annotations</span><span class="p">:</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">        </span><span class="nt">nginx.ingress.kubernetes.io/proxy-body-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8m</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">      </span><span class="nt">hosts</span><span class="p">:</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="w"> </span><span class="nv">.Helm.Release.Namespace</span><span class="w"> </span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">-ingress-controller.{{ .Helm.Release.Namespace }}.{{ .Helm.Release.Cluster }}</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="http-431">HTTP 431 Request Header Fields Too Large</h2>
+<p>Суть проблемы: слишком большие заголовки.</p>
+<p>Лимит на размер заголовков — 4К. Он одинаковый и на внешних nginx, и на Ingress-контроллерах в рамках CI/CD. Это значит, что если заголовок больше лимита (4К), нет смысла настраивать правила Ingress. Поднять лимит также невозможно.</p>
+<div class="admonition success">
+<p><strong>Решение:</strong> уменьшите размер полей заголовка запроса.</p>
+</div>
+<hr />
+<h2 id="_1">Проблема со скачиванием зависимостей</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>remote: You are not allowed to download code from this project
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>fatal: unable to access &#39;{your_url}&#39;: The requested URL returned error: 403
+</code></pre></div>
+<p>Суть проблемы: проект, который пытается скачать зависимости, не добавлен в проекте с зависимостями в настройках CI/CD в Token Access.</p>
+<div class="admonition success">
+<p><strong>Решение:</strong> настройте доступ к зависимостям по <a href="https://docs-devops.wb.ru/cicd/manual.html#feature-dependencies">мануалу</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 NOVILLERO
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/{your_account}" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.indexes", "navigation.instant", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/viewer.js"></script>
+      
+        <script src="../../js/custom.js"></script>
+      
+    
+  </body>
+</html>

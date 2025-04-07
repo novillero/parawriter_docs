@@ -1,0 +1,70 @@
+:root {
+  --md-primary-fg-color:        #1e222d;
+  --md-primary-fg-color--light: #1e222d;
+  --md-primary-fg-color--dark:  #1e222d;
+}
+[data-md-color-scheme="slate"] {
+  --md-hue: 210; 
+}
+[data-md-color-scheme="tech"] {
+  --md-primary-fg-color:        #1e222d;
+  --md-primary-fg-color--light: #1e222d;
+  --md-primary-fg-color--dark:  #1e222d;
+}
+.md-content h1 {
+    font-family: 'Tahoma, arial';
+    font-weight: 600;
+    font-size: 30px;
+    color: #4b5563;
+}
+
+.md-content h2 {
+    font-family: 'Tahoma, arial';
+    font-weight: 600;
+    font-size: 24px;
+    color: #4b5563;
+}
+
+.md-content h3 {
+    font-family: 'Tahoma, arial';
+    font-weight: 600;
+    font-size: 21px;
+    color: #4b5563;
+}
+
+.md-content h4 {
+    font-family: 'Tahoma, arial';
+    font-weight: 600;
+    font-size: 18px;
+    color: #4b5563;
+}
+
+body {
+    font-family: 'Arial';
+}
+
+p {
+    font-family: 'Arial';
+    font-size: 16px;
+}
+
+ul, ol {
+    font-family: 'Arial';
+    font-size: 16px;
+}
+
+.md-nav__link {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    color: #4A4A4A;
+}
+
+
+.md-nav__link:hover {
+    color: #221c1a; 
+}
+  
+.md-status--in-progress::after {
+    mask-image: var(--md-status--in-progress);
+    -webkit-mask-image: var(--md-status--in-progress);
+  }
