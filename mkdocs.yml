@@ -79,11 +79,12 @@ extra:
     - html: '<a href="https://example.com"><img src="images/banner.jpg" alt="Banner" style="width:50%;" /></a>'
 
 extra_javascript:
-  - js/jquery-3.7.1.min.js
-  - js/image-zoom.js
+  - js/viewer.js
+  - js/custom.js
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/viewer.css
 
 markdown_extensions: # Расширения markdown
   - admonition # Поддержка информационных панелей (сообщений типа «Внимание», «Совет», «Примечание», etc.)

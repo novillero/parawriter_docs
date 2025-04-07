@@ -1,19 +1,32 @@
 $(document).ready(function() {
     handleImageZoom();
-    $('body').on('DOMNodeInserted, DOMNodeRemoved', function() {
+    
+    // Создаем MutationObserver для отслеживания изменений в DOM
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(() => {
+            handleImageZoom();
+        });
+    });
+
+    // Настраиваем наблюдателя для отслеживания вставки и удаления узлов
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Добавляем обработчики событий для динамически добавляемых элементов
+    $('body').on('DOMNodeInserted', function() {
         handleImageZoom();
     });
 });
 
+// Функция обработки увеличения изображений
 function handleImageZoom() {
-    $('img:not([alt="logo"],.no-zoom)').off('click').css({cursor: 'zoom-in'}).on('click', function () {
+    $('img:not([alt="logo"],.no-zoom)').off('click').css({ cursor: 'zoom-in' }).on('click', function() {
         var img = $(this);
         var scale = 1; // Начальный масштаб
         var isDragging = false; // Флаг для отслеживания перетаскивания
         var startX, startY, initialX, initialY; // Переменные для координат
 
         // Создаем увеличенное изображение
-        var bigImg = $('<img />').css({
+        var bigImg = $('<img class="your-image-class"/>').css({
             'max-width': '100%',
             'max-height': '100%',
             'position': 'fixed',
@@ -41,13 +54,20 @@ function handleImageZoom() {
             'cursor': 'zoom-out',
             'z-index': 9999,
             'text-align': 'center'
-        }).append(bigImg).off('click').on('click', function () {
-            $(this).fadeOut(300, function () {
-                $(this).remove();
-            });
+        }).append(bigImg).off('click').on('click', function(event) {
+            if ($(event.target).closest('.your-image-class').length === 0) {
+                $(this).fadeOut(300, function() {
+                    $(this).remove();
+                });
+            }
         }).insertAfter(this).animate({
             'opacity': 1
         }, 300);
+
+        // Остановка всплытия события клика на изображении
+        bigImg.on('click', function(event) {
+            event.stopPropagation(); // Останавливаем всплытие события
+        });
 
         // Обработка изменения масштаба с помощью колесика мыши
         bigImg.on('wheel', function(event) {
@@ -84,10 +104,12 @@ function handleImageZoom() {
         });
 
         // Обработчик для закрытия изображения при клике на затемненный фон
-        over.on('click', function() {
-            $(this).fadeOut(300, function() {
-                $(this).remove();
-            });
+        over.on('click', function(event) {
+            if ($(event.target).closest('.your-image-class').length === 0) {
+                $(this).fadeOut(300, function() {
+                    $(this).remove();
+                });
+            }
         });
 
         // Закрытие увеличенного изображения по клавише Esc
@@ -97,11 +119,6 @@ function handleImageZoom() {
                     $(this).remove();
                 });
             }
-        });
-
-        // Предотвращаем закрытие изображения при клике на него
-        bigImg.on('click', function(event) {
-            event.stopPropagation(); // Останавливаем всплытие события
         });
     });
 }
