@@ -84,7 +84,7 @@ extra_javascript:
 
 extra_css:
   - stylesheets/extra.css
-  - stylesheets/viewer.css
+  - css/viewer.css
 
 markdown_extensions: # Расширения markdown
   - admonition # Поддержка информационных панелей (сообщений типа «Внимание», «Совет», «Примечание», etc.)
